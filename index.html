@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <input type="Amount" id="anh">
+    <select name="" id="anh1">
+        <option value="1">Việt Nam</option>
+        <option value="2">Mỹ</option>
+        <option value="3">TQuoc</option>
+    </select>
+    <select name="" id="anh2">
+        <option value="1">VNĐ</option>
+        <option value="2">USD</option>
+        <option value="3">ND Tệ</option>
+    </select>
+    <button onclick="x()">Convert</button>
+    <script>
+        function x(){
+            let giaTriVao= document.getElementById('anh').value
+            let giaTriRa;
+            let tien1= document.getElementById('anh1').value
+            let tien2=document.getElementById('anh2').value
+            if(tien1==1&&tien2==2){
+                giaTriRa=giaTriVao/23000
+                document.write(giaTriRa)
+            } else if (tien1==2&&tien2==1) {
+                giaTriRa = giaTriVao * 23000
+                document.write(giaTriRa)
+            } else if (tien1==1&&tien2==3){
+                giaTriRa=giaTriVao/10000
+                document.write(giaTriRa)
+            }
+
+
+        }
+
+
+    </script>
+</form>
+
+</body>
+</html>
